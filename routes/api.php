@@ -26,6 +26,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/users',[UserController::class,'index']);
 Route::get('/users/{id}',[UserController::class,'show']);
+Route::post('/user',[UserController::class, 'register']);
 
 Route::get('/films',[FilmController::class,'index']);
 Route::get('/films/{id}',[FilmController::class,'show']);
@@ -44,4 +45,4 @@ Route::get('/tickets/{id}',[TicketsController::class,'show']);
 Route::delete('/tickets/{ticket}',[TicketsController::class,'delete']);
 
 Route::post('/register',[AuthController::class,'register']);
-Route::post('/login',[AuthController::class,'login']);
+//Route::post('/login',[AuthController::class,'login']);
